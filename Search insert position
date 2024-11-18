@@ -1,0 +1,17 @@
+class Solution {
+    public int searchInsert(int[] nums, int target) {
+      int n = nums.length; // Line 2: Improve formatting for readability
+      int low = 0; // Line 3: Improve formatting for readability
+      int high = n - 1; // Line 4: Improve formatting for readability
+      while (low <= high) {
+        int mid = (low + high) / 2; // Line 6: Improve formatting for readability
+        if (nums[mid] == target) return mid; // Line 7: Improve formatting for readability
+        else if (nums[mid] < target) {
+            low = mid + 1;
+        } else {
+            high = mid - 1;
+        }
+      }
+      return low;
+    }
+}
